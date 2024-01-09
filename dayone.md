@@ -28,7 +28,7 @@
 - For instance, selects next TikToks in feed with the goal of keeping you on the platform as long as possible. Thus it should suggest the ranked next videos to achieve this goal.
 
 
-## Features
+Features
 ** A set of quantities or properties describing an observation. They can be binary like "day" and "night"; categorical like "morning", "afternoon", "evening"; continuous like 3.141; or ordinal like "threatened", "endangered", "extinct", where the categories can be ordered. **
 - Observation
     - continuous
@@ -58,15 +58,25 @@ Probability
     - Uniform (straight line across)
     - Beta eg for conversion rate
 
-P(spam | message) => conditional probability statement
-Bayes theorum
-    -naive Bayes sees all words in isolation, not adding probability of seeing one word given another (naive independence)
-Laplace smoothing eliminates the issue of having the numerator be 0 when calculating probability. It involves adding 1 to the numerator and 2 to the denominator
-Tokenization takes in a string and separates the words into an array
-Stop word removal - gets rid of words that don't add significant meaning, such as "is"
-Non alphabetic removal - gets rid of random chars
-Stemming: removes ending from different stem. Lemmatization takes a more nuanced approach to get a more accurate stem. However, it is more accurate than stemming.
-* if you lowercase everything, you could lose the meaning of proper nouns, e.g. Mark => mark (n, verb)
-Vectorization: changes it to binary whether or not its in the model's vocabulary
-Bernoulli model
-Denominator is called the evidence; result of the entire model is called posterior
+## Bayes Theorum
+**Bayes theorum is a formula used to evaluate the conditional probability of something, i.e. the probability of something occurring given other occurrences in the past.**
+Mathematically Bayes Theorum is expressed as:
+\[ P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)} \]
+
+Where:
+- \( P(A|B) \) is the probability of event A given that event B has occurred.
+- \( P(B|A) \) is the probability of event B given that event A has occurred.
+- \( P(A) \) is the prior probability of event A.
+- \( P(B) \) is the prior probability of event B.
+
+
+- naive Bayes sees all words in isolation, not adding probability of seeing one word given another (naive independence)
+- Laplace smoothing eliminates the issue of having the numerator be 0 when calculating probability. It involves adding 1 to the numerator and 2 to the denominator
+- Tokenization takes in a string and separates the words into an array
+- Stop word removal - gets rid of words that don't add significant meaning, such as "is"
+- Non alphabetic removal - gets rid of random chars
+- Stemming: removes ending from different stem. Lemmatization takes a more nuanced approach to get a more accurate stem. However, it is more accurate than stemming.
+- Note: if you lowercase everything, you could lose the meaning of proper nouns, e.g. Mark => mark (n, verb)
+- Vectorization: changes it to binary whether or not its in the model's vocabulary
+- Bernoulli model: a probability model using binary to express a successful outcome or a failure
+- Denominator is called the evidence; result of the entire model is called posterior
