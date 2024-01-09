@@ -69,3 +69,35 @@ One should be able to describe these steps and the different iterations of your 
 If you are stuck on step 4, revisit your hypothesis.
 Step 8 should tie back to a tangible business impact.
 This process goes more slowly for companies where it's more expensive and failed experiments can directly affect people's health.
+
+## Naive Bayes Optimizations
+- Use a multinomial model to count instances of a word in a doc instead of Bernoulli model (binary)
+- term frequency: appearances / total words (is this right?)
+- document frequency: total docs / docs where it appears
+TF-IDF = tf * idf
+What does this actually tell us? calculates importance or unimportance of a word.
+This can do stuff like automatically add tags to docs, and refine recommendation model
+
+Eg: Label
+    -1 user converted
+    -0 did not convert
+X = [x1, x2, x3]
+X is a vector that represents a user
+x1: weekly usage
+x2: monthly usage
+x3: average spend
+Each customer has a label: habitual or not habitual
+If a user becomes a habitual user within 30 days after receiving a promotion, they've been converted (1)
+For promotions, we're going to use Gaussian model.
+Feature hashing
+
+Naive Bayes Classifiers:
+good at classifying
+bad at estimating
+
+Scikit-learn:
+a library
+
+kernel density estimation
+
+use gaussian likelihood for no words and continuous data
