@@ -61,7 +61,7 @@ Probability
 ## Bayes Theorum
 **Bayes theorum is a formula used to evaluate the conditional probability of something, i.e. the probability of something occurring given other occurrences in the past.**
 Mathematically Bayes Theorum is expressed as:
-\[ P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)} \]
+P(A|B) = (P(B|A) * P(A)) / P(B)
 
 Where:
 - \( P(A|B) \) is the probability of event A given that event B has occurred.
