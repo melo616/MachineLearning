@@ -36,10 +36,16 @@ False negative and false positive are the opposite of true negative and true osi
 Predicted   spam    true positive   false positive
             legit   false negative  true negative
 
-**Sensitivity** = true pos / true pos + false neg generally means less false negatives (?)
-**Specificity** = true neg / true neg + false pos generally means less false positives
+### Common Metrics
+**Sensitivity** = true pos / true pos + false neg. Generally means less false negatives.  
+**Specificity** = true neg / true neg + false pos. Generally means less false positives
 **Precision** = true pos / true pos + false pos
 **F1 score** = 2 * (sensitivity * precision) / (sensitivity + precision)
+
+### Additional Terms
+- Decision point: Also called decision rule or threshold. It is a cut-off point in which anything below the cutoff is determined to be a certain class and anything above the cutoff is the other class. In the example, the cutoff point separates true positives from false positives and true negatives from false negatives.
+- Receiver Operator Characteristic (ROC) Curve: A plot of how the specificity and sensitivity change as the decision threshold changes. The area under the ROC curve, or AUC, is the probability that a randomly chosen positive example will have a higher prediction probability of being positive than a randomly chosen negative example. 
+- Unbalanced classes: When one class is far more frequently observed than another class.
 
 Validation set after training set allows you to tune your model before applying to test set. The test set is used to evaluate the model peformance, giving insight into how our model will react to unseen/unlabeled examples.
 
@@ -49,3 +55,17 @@ Validation methods:
 - Holdout validations: Assign a subset of examples to be a validation set
 - K fold cross validation: Instead of taking a random subset as a validation set, train k different models and use a different validation set each time, but with the test set set aside and used the same for each. Each fold of data will be used by a different model. The metrics will be averaged out. This elimates the chance ofhaving chosen the most favorable validation set at random.
 - Leave-one-out validation
+
+The process to develop a model is:
+1. Problem
+2. Hypothesis
+3. Simple heuristic
+4. Measure impact
+5. More complex technique
+6. Measure impact
+7. Tune model
+8. Replace existing technique
+One should be able to describe these steps and the different iterations of your project you went through to reach step 8.
+If you are stuck on step 4, revisit your hypothesis.
+Step 8 should tie back to a tangible business impact.
+This process goes more slowly for companies where it's more expensive and failed experiments can directly affect people's health.
