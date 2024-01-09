@@ -27,14 +27,13 @@
 **Optimizing machine learning models to rank candidates, such as music, articles, or products. Typically the goal is to order the candidates such that the candidates which are most likely to be interacted with (purchased, viewed, liked, etc.) are above other candidates that aren't as likely to be interacted with.**
 - For instance, selects next TikToks in feed with the goal of keeping you on the platform as long as possible. Thus it should suggest the ranked next videos to achieve this goal.
 
-
+### Additional Terminology 
 Features
-** A set of quantities or properties describing an observation. They can be binary like "day" and "night"; categorical like "morning", "afternoon", "evening"; continuous like 3.141; or ordinal like "threatened", "endangered", "extinct", where the categories can be ordered. **
+**A set of quantities or properties describing an observation. They can be binary like "day" and "night"; categorical like "morning", "afternoon", "evening"; continuous like 3.141; or ordinal like "threatened", "endangered", "extinct", where the categories can be ordered.**
 - Observation
     - continuous
     - categorical
     - ordinal
-
 
 Features are generally paired with labels. Usually used with supervised models. Unsupervised models generally do not have labels.
 
@@ -42,7 +41,7 @@ Labels: usually paired with a set of features for use in supervised learning. Ca
 Continuous variables can take any value within a given range and can be measured with high precision.
 Discrete variables can only take distinct, separate values, often representing categories or classes.
 
-Math
+## Math Review
 arrays/vectors
 indices are x1, x2, x3, and so on.
 Matrix: a 2D array, generally assigned with the variable name of a capital letter. We can multiple, use the inverse A^-1, or transpose A^T
@@ -69,7 +68,7 @@ Where:
 - \( P(A) \) is the prior probability of event A.
 - \( P(B) \) is the prior probability of event B.
 
-
+### Terminology
 - naive Bayes sees all words in isolation, not adding probability of seeing one word given another (naive independence)
 - Laplace smoothing eliminates the issue of having the numerator be 0 when calculating probability. It involves adding 1 to the numerator and 2 to the denominator
 - Tokenization takes in a string and separates the words into an array
