@@ -101,3 +101,10 @@ a library
 kernel density estimation
 
 use gaussian likelihood for no words and continuous data
+
+## Decision Trees
+- Evaluate each feture
+    - Evaluate values within the feature and put each value in a node based on whether it's less than or greater than the split point
+- The split point comes from the average of the combined value of the feature in question
+- Gini impurity is used to figure out the best split point to use. This is the probability of getting each split point, then multiply by the weight (how many units are in the node / total nodes )
+- The lowest impurity (0) would be the best
